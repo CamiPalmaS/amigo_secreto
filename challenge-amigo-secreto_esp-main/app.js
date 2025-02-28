@@ -23,7 +23,7 @@ function mostrarAmigos(){
 
     amigos.forEach((amigo) => {
         const elemento = document.createElement("li");
-        elemento.innerHTML =`- ${amigo}`;
+        elemento.innerHTML =`~ ${amigo} ~`;
 
         seccionLista.appendChild(elemento);
     });
