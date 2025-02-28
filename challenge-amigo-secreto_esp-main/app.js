@@ -21,10 +21,8 @@ function mostrarAmigos(){
 
     amigos.forEach((amigo) => {
         const elemento = document.createElement("li");
-        //seccionLista.innerHTML = `<li>${amigo}</li>`;
         elemento.innerHTML =`${amigo}`;
 
         seccionLista.appendChild(elemento);
-
     });
 }
