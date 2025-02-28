@@ -2,7 +2,7 @@
 let amigos = [];
 
 function agregarAmigo() {
-    let amigo = document.getElementById("amigo").value.trimm();
+    let amigo = document.getElementById("amigo").value;
     console.log(amigo);
 
     if (amigos.includes(amigo)){
