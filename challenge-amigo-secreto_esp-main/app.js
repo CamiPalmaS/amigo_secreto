@@ -3,10 +3,12 @@ let amigos = [];
 
 function agregarAmigo() {
     let amigo = document.getElementById("amigo").value;
+    let mensajeError = document.getElementById("mensajeError");
+    mensajeError.innerHTML = "";
     console.log(amigo);
 
     if (amigos.includes(amigo)){
-        document.getElementById("mensajeError").innerHTML = "El nombre ingresado ya existe.";
+        mensajeError.innerHTML = `El nombre ${amigo} ya existe.`;
     } else {
         amigos.push(amigo);
         console.log(amigos);
