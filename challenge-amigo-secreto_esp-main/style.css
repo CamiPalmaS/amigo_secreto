@@ -1,7 +1,7 @@
 :root {
-    --color-primary: #4B69FD;
+    --color-primary: #1bbeb9;
     --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
+    --color-tertiary: #ecca35;
     --color-button: #fe652b;
     --color-button-hover: #e55720;
     --color-text: #444444;
@@ -122,7 +122,7 @@ button {
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: #e49e12;
 }
 
 /* Listas */
@@ -159,4 +159,10 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+#mensajeError{
+    color: #e55720;
+    padding: 5px;
+    font-weight: bold;
 }
