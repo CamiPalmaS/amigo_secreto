@@ -7,7 +7,8 @@ function mostrarError(mensaje) {
 }
 
 function agregarAmigo() {
-    let amigo = document.getElementById("amigo").value.trim();
+    let input = document.getElementById("amigo")
+    let amigo = input.value.trim().toLowerCase();
     let patronTexto = /^[A-Za-zÁÉÍÓÚáéíóúÑñ]+$/;
     mensajeError.innerHTML = "";
 
@@ -18,14 +19,16 @@ function agregarAmigo() {
         return mostrarError("El campo nombre no puede estar vacio.");
     }
     else if (!patronTexto.test(amigo)){
+        input.value = "";
         return mostrarError("Solo puedes utilizar letras para los nombres.");
     }
-    //
     else if (amigos.includes(amigo)){
+        input.value = "";
         return mostrarError(`El nombre ${amigo} ya existe.`);
     } else {
         amigos.push(amigo);
         console.log(amigos);
+        input.value = "";
         mostrarAmigos();
         mostrarError("")
         return amigo;
