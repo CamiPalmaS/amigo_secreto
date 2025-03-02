@@ -44,3 +44,14 @@ function mostrarAmigos(){
     });
 }
 
+function sortearAmigo(){
+    let resultadoSorteo = document.getElementById("resultado");
+    if (amigos.length === 0){
+        return mostrarError("La lista de amigos está vacía. Agrega a tus amigos para realizar el sorteo.");
+    } else {
+        let indiceRandom = Math.floor(Math.random() * amigos.length);
+        let amigoSorteado = amigos[indiceRandom];
+        console.log(amigoSorteado);
+        return resultadoSorteo.innerHTML = amigoSorteado;
+    }
+}
