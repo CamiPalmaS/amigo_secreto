@@ -40,8 +40,9 @@ function mostrarAmigos(){
     seccionLista.innerHTML ="";
 
     amigos.forEach((amigo) => {
+        const nombreCapitalizado = amigo.charAt(0).toUpperCase() + amigo.slice(1);
         const elemento = document.createElement("li");
-        elemento.innerHTML =`~ ${amigo} ~`;
+        elemento.innerHTML =`~ ${nombreCapitalizado} ~`;
 
         seccionLista.appendChild(elemento);
     });
